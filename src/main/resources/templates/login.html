@@ -1,0 +1,20 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login page</title>
+</head>
+<body>
+          <h2>login page</h2>
+          <form th:action="@{/dologin}" method="post">
+          <div th:if="${param.error}" class="text-danger">
+             Invalid username or password
+          </div>
+           Email <input type="text" name="username">
+           password<input type="password" name="password">
+           <input type="submit" value="signin">
+          </form>
+</body>
+</html>
